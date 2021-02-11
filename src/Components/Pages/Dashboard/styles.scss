@@ -1,0 +1,54 @@
+@import '../../../styles/mixins.scss';
+
+.dashboard {
+  font-size: 0.875rem;
+}
+
+.dashboard__title {
+  padding-top: 2.5625rem;
+}
+
+.dashboard__search-wrapper {
+  position: relative;
+  margin-top: 2.5rem;
+  width: 100%;
+  height: 2.8125rem;
+  border-radius: 0.9375rem;
+  overflow: hidden;
+}
+
+.dashboard__search-icon {
+  height: 100%;
+  flex-basis: 2.3125rem;
+  background: url('../../../assets/svgs/search-icon.svg') center center / 50%
+    no-repeat $whiteColor;
+}
+
+.dashboard__search-input {
+  flex-grow: 1;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  height: 100%;
+
+  &::placeholder {
+    color: $phColor;
+  }
+}
+
+.dashboard__search-result {
+  flex-basis: 5.125rem;
+  height: 100%;
+  text-align: center;
+  padding: 0.8125rem 0;
+  background-color: $whiteColor;
+  color: $phColor;
+}
+
+.dashboard__no-results {
+  margin-top: 9.375rem;
+}
+
+.dashboard__no-results-message {
+  font-size: 1.125rem;
+}

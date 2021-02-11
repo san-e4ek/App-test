@@ -1,0 +1,81 @@
+@import '../../styles/mixins.scss';
+
+.table {
+  margin-top: 1.875rem;
+}
+
+.table__row {
+  display: flex;
+  align-items: center;
+  height: 4.375rem;
+  border-radius: 0.1875rem;
+  overflow: hidden;
+  background: $whiteColor;
+  border-left: 0.1875rem solid blue;
+  margin: 0.3125rem 0;
+  transition: 0.7s;
+  cursor: pointer;
+  outline: none;
+
+  &:not(&--header):hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 1.25rem #0000004a;
+  }
+
+  &--header {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    height: auto;
+    background: transparent;
+  }
+}
+
+.table__col {
+  padding: 0.625rem;
+
+  &--header {
+    display: flex;
+    text-transform: uppercase;
+    color: #999999;
+  }
+
+  &--Online {
+    color: $onlineStatusColor;
+  }
+  &--Paused {
+    color: $pausedStatusColor;
+  }
+  &--Stopped {
+    color: $stoppedStatusColor;
+  }
+  &:nth-child(1) {
+    flex-basis: 25rem;
+  }
+  &:nth-child(2) {
+    flex-basis: 7.8125rem;
+  }
+  &:nth-child(3) {
+    flex-basis: 6.25rem;
+  }
+  &:nth-child(4) {
+    flex-basis: 13.75rem;
+  }
+  &:nth-child(5) {
+    flex-basis: 10rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.table__sort-arrow {
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0.3125rem 0 0 0.625rem;
+  background: url('../../assets/svgs/sort-arrow.svg') 0 0 / contain no-repeat;
+  transition: 0.5s;
+
+  &--DESK {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,74 @@
+@import './styles/mixins.scss';
+
+.wrapper {
+  max-width: 62.5rem;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.flex-between {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-around {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex-center {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button {
+  height: 1.875rem;
+  width: 5.9375rem;
+  border-radius: 0.625rem;
+  color: $whiteColor;
+
+  &--Results,
+  &--reset {
+    background: $resultColor;
+  }
+  &--Finalize {
+    background: $finalizeColor;
+  }
+
+  &--reset {
+    background: $resultColor;
+    margin-top: 3.125rem;
+  }
+}
+
+.button-back {
+  position: fixed;
+  bottom: 2.75rem;
+  left: 4.8125rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+
+  &::before {
+    position: absolute;
+    width: 0.5625rem;
+    height: 1rem;
+    left: -1.1875rem;
+    top: 0.125rem;
+    background: url('./assets/svgs/back-button-arrow.svg');
+    content: '';
+  }
+}
