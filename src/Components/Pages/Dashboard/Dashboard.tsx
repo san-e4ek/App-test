@@ -115,7 +115,7 @@ export const Dashboard: React.FC = () => {
         axios.get(RequestsUrls.SITES_REQUEST_URL),
       ])
       .then(arrayMaper)
-      .then((data) => setData(data))
+      .then(setData)
       .catch(console.log)
   }, [])
 
